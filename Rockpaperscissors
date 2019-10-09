@@ -1,0 +1,15 @@
+# Rules to the game
+choice = ['rock', 'scissors', 'paper']
+
+# Game loop
+while True:
+    player1 = input("Player 1 - Rock, Paper, Scissors? ").lower()
+    player2 = input("Player 2 - Rock, Paper, Scissors? ").lower()
+    if choice.index(player1) == (choice.index(player2) + 1) % 3:
+        print('Player 2 wins!')
+        break
+    elif choice.index(player2) == (choice.index(player1) + 1) % 3:
+        print('Player 1 wins!')
+        break
+    else:
+        print("Its a draw! Try again")
